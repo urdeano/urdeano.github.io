@@ -18,7 +18,7 @@
     <link rel="alternative" href="/atom.xml" title="Hexo" type="application/atom+xml">
   
   
-    <link rel="icon" href="/img/favicon.png">
+    <link rel="icon" href="/img/favicon.jpg">
   
   <link rel="stylesheet" type="text/css" href="/./main.0cf68a.css">
   <style type="text/css">
@@ -175,12 +175,19 @@
 <blockquote>
 <p>稳定性：2-stable</p>
 </blockquote>
-<p><strong> bath.basename(path[,ext]) </strong></p>
+<p><strong>bath.basename(path[,ext])</strong></p>
 <ul>
-<li>path <string> 路径</string></li>
-<li>ext <string> 可选参数</string></li>
+<li><code>path</code> <code>&lt;string&gt;</code> 路径</li>
+<li><code>ext</code> <code>&lt;string&gt;</code> 可选参数</li>
 </ul>
 <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">path.basename(<span class="string">'/foo/bar/baz/asdf/quux.html'</span>);</span><br><span class="line">// returns <span class="string">'quux.html'</span></span><br><span class="line">path.basename(<span class="string">'/foo/bar/baz/asdf/quux.html'</span>, <span class="string">'.html'</span>);</span><br><span class="line">// returns <span class="string">'quux'</span></span><br><span class="line">path.basename(<span class="string">'/foo/bar/baz/asdf/quux.html'</span>, <span class="string">'ux.html'</span>);</span><br><span class="line">// returns <span class="string">'qu'</span></span><br></pre></td></tr></table></figure>
+<p>通过可选参数<code>ext</code>可对返回值进行自定义截取，但所有的参数必须是字符串，否则报错。</p>
+<p><strong>path.dirname(path)</strong></p>
+<ul>
+<li><code>path</code> <code>&lt;String&gt;</code>  路径</li>
+<li><code>path.dirname()</code> 返回<code>path</code>的所在路径。<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">path.dirname(<span class="string">'/foo/bar/baz/asdf'</span>);</span><br><span class="line">// returns <span class="string">'/foo/bar/baz'</span></span><br><span class="line">path.dirname(<span class="string">'/foo/bar/baz/asdf/quux.html'</span>);</span><br><span class="line">// returns <span class="string">'/foo/bar/baz/asdf'</span></span><br><span class="line">path.dirname(<span class="string">'quux.html'</span>);</span><br><span class="line">// returns <span class="string">'.'</span></span><br></pre></td></tr></table></figure></li>
+</ul>
+
       
 
       
